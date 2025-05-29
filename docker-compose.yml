@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  # Service Spring Boot
+  app:
+    build: .
+    container_name: eurekaServer
+    ports:
+      - "8000:8000"
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
